@@ -57,9 +57,9 @@ jobs:
       - name: ecuting remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
-          username: ${{ secret.YP_SP14_USER }}
-          host: ${{ secret.YP_SP14_HOST }}
-          key: ${{ secret.YP_SP14_SSH_KEY }}
+          username: ${{ secrets.YP_SP14_USER }}
+          host: ${{ secrets.YP_SP14_HOST }}
+          key: ${{ secrets.YP_SP14_SSH_KEY }}
           script: |
             sudo docker pull akovchegin/infra_actions:latest
             sudo docker stop $(sudo docker ps -a -q)
