@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse(
-        'Есть три вещи, на которые можно смотреть бесконечно:'
+        'Есть три вещи, на которые можно смотреть бесконечно: '
         'огонь, вода и эта страница!'
     )
 

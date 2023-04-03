@@ -20,7 +20,7 @@ class StaticPagesURLTests(TestCase):
         response = self.guest_client.get('/')
         self.assertContains(
             response,
-            'Есть три вещи, на которые можно смотреть бесконечно:'
+            'Есть три вещи, на которые можно смотреть бесконечно: '
             'огонь, вода и эта страница!'
         )
 
