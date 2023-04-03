@@ -62,6 +62,6 @@ jobs:
           key: ${{ secrets.YP_SP14_SSH_KEY }}
           script: |
             sudo docker pull akovchegin/infra_actions:latest
-            sudo docker ps -a -q | xargs -r docker stop
-            sudo docker docker ps -a -q -f status=exited | xargs -r docker rm -v
+            (sudo docker ps -a -q | xargs -r sudo docker stop)
+            (sudo docker docker ps -a -q -f status=exited | xargs -r sudo docker rm -v)
             sudo docker run -rm -d -p 5000:5000 akovchegin/infra_actions:latest
